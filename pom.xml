@@ -32,6 +32,7 @@
         <module>services</module>
         <module>server</module>
         <module>configserver</module>
+        <module>gateway</module>
     </modules>
 
 

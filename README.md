@@ -35,7 +35,7 @@
 
 运行CloudApplication 项目组正常运行
 
-### 1.3 父类工程添加一个common module(其他子模块都依赖当前的模块)
+### 1.3 父类工程添加一个common module(使用maven项目的方式创建)
 
   运行CloudApplication 项目组正常运行commit
 
@@ -128,3 +128,59 @@
 ```
 
 子类的配置文件正常映入 CloudApplication运行正常
+
+### 1.5 使用maven的方式给项目添加一个services 模块
+
+  运行CloudApplication 项目组正常运行commit
+
+### 1.6 为项目添加依赖
+
+```xml-dtd
+  <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.yukong</groupId>
+            <artifactId>panda-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+```
+
+一个父项目+2个空的module 运行CloudApplication  正常通过
+
+----------------
+

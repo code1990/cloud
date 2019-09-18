@@ -180,7 +180,9 @@
 
 ```
 
-一个父项目+2个空的module 运行CloudApplication  正常通过
+一个父项目+2个空的module 运行CloudApplication  正常通过 添加一个tagv0.1
 
 ----------------
+
+### 1.7 添加server 模块
 

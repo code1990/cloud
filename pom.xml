@@ -31,6 +31,7 @@
         <module>common</module>
         <module>services</module>
         <module>server</module>
+        <module>configserver</module>
     </modules>
 
 

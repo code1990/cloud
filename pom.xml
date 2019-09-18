@@ -33,6 +33,7 @@
         <module>server</module>
         <module>configserver</module>
         <module>gateway</module>
+        <module>auth</module>
     </modules>
 
 

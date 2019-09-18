@@ -1,10 +1,10 @@
 # springcloud项目搭建
 
-### 1.1 使用sprngboot创建一个父类工程不添加任何的依赖
+### 1.1 cloud
 
   运行CloudApplication 项目组正常运行commit
 
-### 1.2 父类工程修改pom.xml
+### 1.2 cloud pom.xml
 
 ```xml
     <properties>
@@ -35,11 +35,11 @@
 
 运行CloudApplication 项目组正常运行
 
-### 1.3 父类工程添加一个common module(使用maven项目的方式创建)
+### 1.3 common
 
   运行CloudApplication 项目组正常运行commit
 
-### 1.4 common module修改pom.xml
+### 1.4 common pom.xml
 
 ```xml
     <parent>
@@ -129,11 +129,11 @@
 
 子类的配置文件正常映入 CloudApplication运行正常
 
-### 1.5 使用maven的方式给项目添加一个services 模块
+### 1.5 services
 
   运行CloudApplication 项目组正常运行commit
 
-### 1.6 为项目添加依赖
+### 1.6 services pom.xml
 
 ```xml-dtd
   <properties>
@@ -184,9 +184,9 @@
 
 ----------------
 
-### 1.7 添加server 模块
+### 1.7 server
 
-### 1.8添加pOm.xml
+### 1.8 server pom.xml
 
 ```xml
 
@@ -277,7 +277,7 @@
 
 ### 2.1 gateway
 
-### 2.2 gateway
+### 2.2 gateway pom.xml
 
 ```xml
 	<properties>
@@ -361,6 +361,15 @@
 		</plugins>
 	</build>
 
+
+
+```
+
+### 2.3 auth
+
+### 2.4 auth pom.xml
+
+```xml
 
 
 ```
